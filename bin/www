@@ -20,8 +20,11 @@ app.set('port', port);
  * Create HTTP server.
  */
 var server = http.createServer(app);
-var io = require('socket.io').listen(server);
 
+/**
+ * 소켓 io 적용 및 server.js 연동
+ */
+var io = require('socket.io').listen(server);
 chatServer.setSocketIo(io);
 
 /**
