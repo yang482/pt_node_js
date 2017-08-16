@@ -41,6 +41,17 @@ nav li {
   margin: 1px 0;
 }
 
+nav li a {
+  text-decoration: none;
+  color: #000000;
+  display: inline-block;
+  width: 100%;
+}
+
+nav li a:hover {
+  background-color: #00EE00;
+}
+
 section {
   float: left;
   margin: 0;
