@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="/javascripts/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function(){
+    $(document).ready(function(){
         var socket = io.connect('http://localhost');
         $("#msgbox").keyup(function(event) {
             if (event.which == 13) {
@@ -19,11 +19,11 @@
             console.log(data.msg);
             $('#msgs').append(data.msg+'<BR>');
         });
-      });
+    });
     </script>
-  </head>
-  <body>
+</head>
+<body>
     <div id="msgs"></div>
     <input type="text" id="msgbox"/>
-  </body>
+</body>
 </html>

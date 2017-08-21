@@ -1,31 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 
-    <script type="text/javascript" src="/javascripts/jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript" src="/javascripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function(){
-      });
+    $(document).ready(function(){
+
+        /* Add Note */
+        $("a[href=#add]").click(function(event){
+            alert("click");
+        });
+        $("a[href=#add]").taphold(function(event){
+            alert("taphold");
+        });
+
+        addNote = functino(  ){
+
+        };
+    });
     </script>
-  </head>
-  <body>
+</head>
+<body>
     <div id="container">
-      <header>
-        <p>node.js 연습하기</p>
-      </header>
-      <nav class="vertical">
-        <ul>
-          <li><a href="#">nav1</a></li>
-          <li><a href="#">nav2</a></li>
-          <li><a href="#">nav3</a></li>
-        </ul>
-      </nav>
-      <section>
-      </section>
-      <footer>
-      </footer>
+        <header>
+            <p>node.js 연습하기</p>
+        </header>
+        <nav class="vertical">
+            <ul>
+                <li><a href="#add">add</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <span></span>
+                <span></span>
+            </article>
+        </section>
+        <footer>
+            <p>copyright</p>
+        </footer>
     </div>
-  </body>
+</body>
 </html>

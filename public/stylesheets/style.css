@@ -1,69 +1,79 @@
 body {
-  margin: 0;
-  padding: 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
 div#container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
 }
 
 header {
-  margin: 0;
-  padding: 10px;
-  height: 50px;
-  background-color: #FFF;
+    margin: 0;
+    padding: 1.0417%;
+    height: 6.51%;
+    background-color: #EEE;
 }
 
 nav.vertical {
-  margin: 0;
-  padding: 0;
-  width: 100px;
-  float: left;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    float: left;
 }
 
 nav ul {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-  list-style: none;
-  background-color: #EEE;
-  line-height: 30px;
-  text-align: center;
-  margin: 1px 0;
+    list-style: none;
+    background-color: #EEE;
+    line-height: 30px;
+    text-align: center;
+    margin: 1px 0;
 }
 
 nav li a {
-  text-decoration: none;
-  color: #000000;
-  display: inline-block;
-  width: 100%;
+    text-decoration: none;
+    color: #000000;
+    display: inline-block;
+    width: 100%;
 }
 
 nav li a:hover {
-  background-color: #00EE00;
+    background-color: #00EE00;
 }
 
 section {
-  float: left;
-  margin: 0;
-  padding: 10px;
-  height: 50px;
-  background-color: #FFF;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 80%;
+    min-height: 100px;
+    background-color: #DDD;
+    overflow: hidden;
+}
+
+article {
+    padding: 0.5%;
+}
+
+article textarea {
+    resize:none;
 }
 
 footer {
-  clear: both;
-  margin: 0;
-  padding: 10px;
-  height: 50px;
-  background-color: #FFF;
+    clear: both;
+    margin: 0;
+    padding: 1.0417%;
+    height: 6.51%;
+    background-color: #BBB;
 }
