@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
+    <title>Practice Node Js</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 
 
@@ -10,16 +10,41 @@
     <script type="text/javascript">
     $(document).ready(function(){
 
-        /* Add Note */
-        $("a[href=#add]").click(function(event){
-            alert("click");
-        });
-        $("a[href=#add]").taphold(function(event){
-            alert("taphold");
+        /* Add Note Event */
+
+        /* 탭홀드(롱클릭) 이벤트 발생 시 클릭 이벤트 제어 플래그 */
+        var skipNextClick  = false;
+        $("a[href=#add]").on("click taphold", function(e){
+            var isClick = (e.type == "click");
+            if( isClick && !skipNextClick){
+                addNoteServer();
+            } else if( isClick && skipNextClick  ) {
+                skipNextClick = false;
+            } else {
+
+                skipNextClick = true;
+            }
         });
 
-        addNote = functino(  ){
+        addNoteServer = function(){
+            $("#hidParam").val("");
+            $("#hidParam").val("test");
 
+            $("#frmSubmit").attr("method", "POST");
+            $("#frmSubmit").attr("action", "/note");
+            $("#frmSubmit").submit();
+        }
+
+        addNoteHtml = function( name ){
+            var addHtml = "";
+
+            addHtml += "<li>";
+            addHtml += "<a href='#'>";
+            addHtml += name == null || name == undefined || name.length == 0 ? "noname" : name;
+            addHtml += "</a>";
+            addHtml += "</li>";
+
+            $("nav.vertical").append(addHtml);
         };
     });
     </script>
@@ -27,7 +52,7 @@
 <body>
     <div id="container">
         <header>
-            <p>node.js 연습하기</p>
+            <h1>node.js 연습하기</h1>
         </header>
         <nav class="vertical">
             <ul>
@@ -44,5 +69,8 @@
             <p>copyright</p>
         </footer>
     </div>
+    <form id="frmSubmit">
+        <input type="hidden" id="hidParam" name="hidParam" />
+    </form>
 </body>
 </html>
