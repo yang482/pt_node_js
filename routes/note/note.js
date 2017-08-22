@@ -2,15 +2,17 @@ var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    console.log(req.query);
+router.get('/:hidParam(*)', function(req, res, next) {
+    console.log('get param : ');
+    console.log(req.params);
     res.render('index', { title: 'Express' });
 });
 
 router.post('/', function(req, res, next) {
-    console.log(req.body.hidParam);
+    console.log('post param : ');
+    console.log(req.body);
 
-    res.redirect('/note?hidParam=' + req.body.hidParam);
+    res.redirect('/notes/' + req.body.hidParam);
 });
 
 module.exports = router;

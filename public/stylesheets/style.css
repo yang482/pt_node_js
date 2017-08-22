@@ -77,3 +77,11 @@ footer {
     height: 6.51%;
     background-color: #BBB;
 }
+
+
+.width_100_per {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
