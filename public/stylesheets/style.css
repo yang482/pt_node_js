@@ -78,7 +78,7 @@ footer {
     background-color: #BBB;
 }
 
-
+/* table td 안에 맞게끔 넓이 100% 적용할 때 */
 .width_100_per {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
